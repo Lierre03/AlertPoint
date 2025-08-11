@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state -->
+    <item android:color="?attr/colorPrimary" android:state_focused="true" />
+    <!-- Activated (dropdown opened) -->
+    <item android:color="?attr/colorPrimary" android:state_activated="true" />
+    <!-- Error state -->
+    <item android:color="?attr/colorError" android:state_enabled="true" android:state_focused="false" android:state_activated="false" />
+    <!-- Disabled state -->
+    <item android:color="@color/material_on_surface_disabled" android:state_enabled="false" />
+    <!-- Default state -->
+    <item android:color="#808080" />
+</selector>

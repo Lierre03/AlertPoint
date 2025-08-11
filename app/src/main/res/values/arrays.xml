@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string-array name="street_options">
+            <item>Atis</item>
+            <item>Balud</item>
+            <item>Bato-Bato</item>
+            <item>Bayabas</item>
+            <item>Camarin Rd</item>
+            <item>Guyabano</item>
+            <item>Kalapati St</item>
+            <item>Kalaw</item>
+            <item>Kanduro</item>
+            <item>Kulyawan</item>
+            <item>Lanzones</item>
+            <item>Lawin</item>
+            <item>Loro</item>
+            <item>Maya</item>
+            <item>Melon</item>
+            <item>Pina</item>
+            <item>Pipit</item>
+            <item>Pugo</item>
+            <item>Punay</item>
+            <item>Singkamas</item>
+            <item>Tagak</item>
+            <item>Tikling St</item>
+        </string-array>
+    </resources>

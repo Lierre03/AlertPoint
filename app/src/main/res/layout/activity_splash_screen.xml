@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+
+
+
+    <!-- Main Splash Screen Content -->
+    <RelativeLayout
+        android:id="@+id/mainSplashContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/alertpoint_logo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/alertpoint_logo_with_text"
+            android:contentDescription="Logo" />
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/alertpoint_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:max="100"
+            android:progress="0"/> <!-- Start progress at 0 -->
+
+        <!-- Flood Container fixed at the bottom -->
+        <FrameLayout
+            android:id="@+id/floodContainer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/wave1"
+                android:layout_width="2000dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/wave_shape_1" />
+
+            <ImageView
+                android:id="@+id/wave2"
+                android:layout_width="2000dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wave_shape_2" />
+
+            <ImageView
+                android:id="@+id/wave3"
+                android:layout_width="2000dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wave_shape_3" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- No Internet Connection View -->
+    <LinearLayout
+        android:id="@+id/noInternetView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:visibility="gone">  <!-- Initially hidden -->
+
+        <ImageView
+            android:id="@+id/noInternetIcon"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/no_internet_icon" /> <!-- Replace with your actual no internet icon -->
+        <!--        app:tint="@color/grey"  /> &lt;!&ndash; Optional: tint the icon &ndash;&gt;-->
+
+        <TextView
+            android:id="@+id/noInternetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="No Internet Connection"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noInternetSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Please connect to the internet."
+            android:textColor="#555"
+            android:textSize="16sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/tryAgainButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:background="@drawable/rounded_button_background"-->
+<!--            android:elevation="4dp"-->
+<!--            android:stateListAnimator="@null"-->
+<!--            android:text="Try Again"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#FFFFFF" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tryAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/rounded_button_background"
+            android:stateListAnimator="@animator/button_press_feedback"
+            android:text="Try Again"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</RelativeLayout>

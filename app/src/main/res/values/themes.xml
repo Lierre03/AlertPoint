@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--    <style name="Theme.AlertPointDraft" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+<!--        &lt;!&ndash; Main app theme &ndash;&gt;-->
+<!--        <item name="colorPrimary">#660000</item>-->
+<!--        <item name="colorPrimaryDark">#8B0000</item>-->
+<!--        <item name="colorAccent">#F5B7B1</item>-->
+<!--    </style>-->
+
+
+    <style name="Theme.AlertPointDraft" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Main colors -->
+        <item name="colorPrimary">#911A1A</item>
+        <item name="colorPrimaryDark">#8B0000</item>
+        <item name="colorAccent">#F5B7B1</item>
+
+        <!-- TextInputLayout outline background fix -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.AlertPointDraft.TextInputLayout</item>
+
+    </style>
+
+    <!-- Transparent outline background -->
+    <style name="ThemeOverlay.AlertPointDraft.TextInputLayout" parent="">
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Theme.AlertPointDraft.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Splash screen specific -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="OtpBox">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:background">@drawable/otp_box_background</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

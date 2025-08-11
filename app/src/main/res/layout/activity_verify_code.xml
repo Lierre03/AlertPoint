@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".VerifyCode">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/arrow_back_icon"
+        android:contentDescription="Back button"
+        app:tint="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/verify_code_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Verify Code"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/verify_code_subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify_code_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Please enter the email code"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:id="@+id/otp_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify_code_subheader"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/otp_box1"
+                style="@style/OtpBox" />
+
+            <EditText
+                android:id="@+id/otp_box2"
+                style="@style/OtpBox" />
+
+            <EditText
+                android:id="@+id/otp_box3"
+                style="@style/OtpBox" />
+
+            <EditText
+                android:id="@+id/otp_box4"
+                style="@style/OtpBox" />
+
+            <EditText
+                android:id="@+id/otp_box5"
+                style="@style/OtpBox" />
+
+            <EditText
+                android:id="@+id/otp_box6"
+                style="@style/OtpBox" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/didnt_receive_otp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Didn't receive OTP? Resend code"
+            android:layout_below="@id/otp_input_layout"/>
+
+        <TextView
+            android:id="@+id/resend_code_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/didnt_receive_otp_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Resend code"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/resend_code_link"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button_background"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>
